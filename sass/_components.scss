@@ -129,7 +129,94 @@
         border-radius:50%
     }
 
-    &_user-name{
+}
+
+.side-nav{
+    // background-color: lightslategray;
+    width:100%;
+    margin-top: 3.5rem;
+    font-size:1.2rem;
+    list-style: none;
+    color:#fff;
+     
+    &_item{
+        position: relative;
+        &:not(:last-child){
+            margin-bottom: 1.7rem;
+        
+        }
+    }
+
+        &_item::before{
+            content:"";
+            position: absolute;
+            top:0;
+            left:0;
+            width:.2rem;
+            height:100%;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            background-color:var(--color-primary);
+            transition: transform .2s ease-in-out,
+                        background-color 0.2s ease-in,
+                        width .2s ease-in-out 0.2s;
+
+            
+            
+    }
+
+    &_item:hover::before{
+        transform: scaleY(1);
+        width:100%
+        
 
     }
+
+    &_item:active::before{
+        background-color:var(--color-primary-dark)
+
+    }
+
+   
+
+
+
+
+    &_link,
+    &_link:link,
+    &_link:visited{
+        // background-color: lightgreen;
+        padding: 1rem 1.9rem;
+        z-index: 2;
+        position: relative;
+        color: inherit;
+        font-size:inherit;
+        font-weight: 700;
+        text-decoration: none;
+        display:flex;
+        justify-content:flex-start;
+        align-items: center;
+        text-transform: uppercase;
+        transition: all 0.2s ease-in-out;
+
+    }
+
+
+    &_link:active{
+        transform:scale(1.1);
+    }
+
+
+    &_icon{
+        margin-right:2rem;
+        height:2.2rem;
+        width:2.2rem;
+        fill:var(--color-grey-light-4)
+    }
+
+
+}
+.legal{
+    color:#fff;
+    padding:1rem
 }
