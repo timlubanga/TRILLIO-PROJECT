@@ -299,9 +299,31 @@ margin-right:1rem
 
 .btn-inline:focus{
     outline:none;
-  
+}
+
+.btn-inline:hover{
+    cursor: pointer;
+}
+
+.button-bottom{
+    color:var(--color-primary-light);
+    display:inline-block;
+    &_span{
+        margin-left:0.5rem;
+        font-size:2rem;
+        display:inline-block;
+        transition: all 0.3s ease-in-out
+    }
+}
+
+.button-bottom:hover .button-bottom_span{
+    margin-left:1rem;
 
 }
+
+
+
+
 
 .overview_location:hover{
     color:var(--color-primary);
@@ -366,7 +388,7 @@ margin-right:1rem
 .details{
     font-size: 1.4rem;
     background-color:var(--color-grey-light-1);
-    color: var(--color-grey-dark-1);
+    color: var(--color-grey-dark-2);
     padding:3rem;
     display: flex;
 
@@ -380,14 +402,9 @@ margin-right:1rem
 
 }
 
-.details_testimony{
-    flex:1
 
-}
 
-.paragraph{
 
-}
 
 .paragraph:not(:last-of-type){
     margin-bottom:1.5rem
@@ -416,8 +433,8 @@ margin-right:1rem
         -webkit-mask-size: cover;
         mask-size: cover;
         display:inline-block;
-        height:1.7rem;
-        width:1.7rem;
+        height:1.3rem;
+        width:1.3rem;
         margin-right:.5rem
 
     }
@@ -449,4 +466,80 @@ align-items: center;
         border: 0.5rem solid white;
         border-radius: 50%;
     }
+}
+
+.user_reviews{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    
+   
+}
+
+.review{
+    background-color: #fff;
+    padding:3rem;
+    box-shadow: 1px 1px 20px rgba(0,0,0,0.2);
+    margin-bottom:3rem;
+    position:relative;
+    overflow: hidden;
+    &_text{
+        position: relative;
+        z-index: 2;
+    }
+
+    &_user{
+        margin-top:2rem;
+        display:flex;
+        align-items: center;
+
+    }
+
+    &_photo{
+        height:5rem;
+        width:5rem;
+        border-radius:50%
+
+
+    }
+
+    &_user-box{
+        margin-right:auto;
+        margin-left:2rem;
+
+    }
+
+    &_user-name{
+        font-size:1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+
+    }
+
+    &_user-date{
+        font-size:1.2rem;
+    }
+
+    &_rating{
+        font-size:2.2rem;
+        color:var(--color-primary-light)
+
+    }
+
+    &::before{
+        padding:0;
+        content:"\201C";
+        color:var(--color-grey-light-2);
+        position:absolute;
+        top:-2.5rem;
+        line-height:1;
+        left:-1rem;
+        font-size:20rem;
+        font-family:sans-serif;
+        
+        
+    
+}
+
 }
