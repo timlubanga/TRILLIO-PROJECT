@@ -295,6 +295,10 @@ margin-right:1rem
     background-color:white;
     border-bottom: currentColor 1px solid;
 
+    &_grey{
+        background-color: var(--color-grey-light-1);
+    }
+
 }
 
 .btn-inline:focus{
@@ -537,9 +541,60 @@ align-items: center;
         left:-1rem;
         font-size:20rem;
         font-family:sans-serif;
-        
-        
-    
 }
 
+}
+
+
+.cta{
+    padding:2rem;
+    text-align:center;
+    &_book-now{
+        color:var(--color-grey-dark-2)
+
+    }
+
+    &_button{
+        overflow: hidden;
+        position:relative;
+        font-size:1.4rem;
+        font-weight: 700;
+        margin-top:1rem;
+        border:none;
+        color: #fff;
+        padding:1.3rem 2.5rem;
+        border-radius:100px;
+        background-image: linear-gradient(to right,var(--color-primary-light), var(--color-primary-dark));
+
+        &:focus{
+            outline:none
+        }
+
+    }
+
+    &_invisible{
+        display:inline-block;
+        position:absolute;
+        width:100%;
+        top:50%;
+        left:-100%;
+        transform:translateY(-50%);
+        transition: all 0.2s ease-in-out;
+
+    }
+
+    &_visible{
+        display:inline-block;
+        width:100%;
+        transition: all 0.2s ease-in-out;
+
+    };
+
+    &_button:hover &_invisible{
+        transform:translate(100%,-50%)
+    }
+
+    &_button:hover &_visible{
+        transform:translateX(130%)
+    }
 }
